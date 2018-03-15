@@ -17,3 +17,17 @@ var second_word = ["weather-bitten", "unchin-snouted", "toad-spotted", "tickle-b
 var third_word = ["wagtail", "whey-face", "vassal", "varlet", "strumpet", "skainsmate", "scut", "ratsbane", "pumpion", "puttock", "pignut", "pigeon-egg", "nut-hook", "mumble-news", "moldwarp", "miscreant", "minnow", "measle", "mammet", "malt-worm", "maggot-pie", "lout", "lewdster", "joithead", "hugger-mugger", "horn-beast", "hedge-pig", "harpy", "haggard", "gudgeon", "giglet", "fustilarian", "foot-licker", "flirt-gill", "flax-wench", "flap-dragon", "dewberry", "death-token", "codpiece", "coxcomb", "clotpole", "clack-dish", "canker-blossom", "bum-bailey", "bugbear", "boar-pig", "bladder", "barnacle", "baggage", "apple-john"];
 
 // YOUR CODE HERE
+function makeInsult() {
+    let personName = prompt("What's your name?");
+    let firstRandomIdx = Math.floor(Math.random() * first_word.length);
+    let secondRandomIdx = Math.floor(Math.random() * second_word.length);
+    let thirdRandomIdx = Math.floor(Math.random() * third_word.length);
+	let firstRandomWord = first_word[firstRandomIdx];
+  	let secondRandomWord = second_word[secondRandomIdx];
+  	let thirdRandomWord = third_word[thirdRandomIdx];
+
+
+  return `Why ${personName}, you ${firstRandomWord}, ${secondRandomWord} ${thirdRandomWord}`;
+}
+
+console.log(makeInsult());

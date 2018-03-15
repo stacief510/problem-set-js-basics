@@ -10,3 +10,31 @@
 */
 
 // YOUR CODE HERE
+function isPrime(num) {
+
+    //take the number, see if it is evenly divisible, if yes, return true.
+    for (i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false;
+            break;
+        }
+    }
+    return true;
+}
+
+function primes(max){
+	//start at 2 up til maxNum, 
+	var allPrimeNum = [];
+	for (var i = 2; i<=max; i++){ 
+	//check each number if prime (isPrime(i))
+		if(isPrime(i)){
+		allPrimeNum.push(i);
+		}
+	//write down if prime and store (push to answer array)
+
+	//return array of all prime numbres below that a max number
+}
+		return allPrimeNum;
+}
+
+console.log(primes(13));
